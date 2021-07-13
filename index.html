@@ -7,8 +7,10 @@
         password=prompt('请输入密码 (本网站需输入密码才可进入):','');
         if (password != 'dyy')
             {alert("密码不正确,无法进入本站!!"); 
-            window.opener=null; window.close();}  // 密码不正确就关闭//
-        </script>
+           history.go(-1);//返回上一页网页
+            }  // 密码不正确就关闭//
+            
+        </script>    
     <title>Home of dyy</title>
     <!-- Meta tag Keywords -->
     <link rel="shortcut icon" href="favicon.ico">
