@@ -556,11 +556,11 @@ pre code {
   margin-left: auto;
 }
 
-.container a span {
+.container a {
   color: #fff;
 }
 
-.container a:hover span {
+.container a:hover {
   color: rgb(214, 214, 214);
 }
 
