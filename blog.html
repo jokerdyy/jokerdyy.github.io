@@ -101,11 +101,11 @@
                 <div class="row mt-lg-5 mt-3">
                     <div class="col-lg-8 blog-left-content">
                         <div class="card">
-                            <a href="https://blog.csdn.net/lizhiqiang1217/article/details/89070075"> <img class="card-img-top" src="images/banner2.jpg" alt="Card image cap"></a>
+                            <a href="https://z3.ax1x.com/2021/07/20/WY4P3j.jpg"> <img class="card-img-top" src="https://z3.ax1x.com/2021/07/20/WY4P3j.jpg" alt="Card image cap"></a>
                             <div class="card-body">
                                 <h6 class="date"><span>
                                      By: DYY</span> 2021.7.21</h6>
-                                <h5 class="card-title"><a class="b-post text-dark" href="https://blog.csdn.net/u013378306/article/details/86668313">docker基本指令以及run</a></h5>
+                                <h5 class="card-title"><a class="b-post text-dark" href="">docker基本指令以及run</a></h5>
                                 <p class="card-text">run指令示例：docker run --gpus all -v /home/dyy/:/home/dyy/ -v /home/datasets/Market-1501-v15.09.15/:/home/datasets/Market-1501-v15.09.15/ -v /home/datasets/Market-1501-v15.09.15/train/:/home/datasets/Market-1501-v15.09.15/train/ -v /home/datasets/Market-1501-v15.09.15/test/:/home/datasets/Market-1501-v15.09.15/test/ --shm-size=10g -it modify /bin/bash</p>
                                 <a class="btn btn-banner text-capitalize my-3" href="Linux_Docker.pdf">Docker使用手册</a>
                             </div>
@@ -115,13 +115,50 @@
                         </div>
 
                         <div class="card my-lg-5">
-                            <a href="single.html">  <img class="card-img-top" src="images/banner3.jpg" alt="Card image cap"></a>
+                            <a href="https://z3.ax1x.com/2021/07/20/WY4N5D.jpg">  <img class="card-img-top" src="https://z3.ax1x.com/2021/07/20/WY4N5D.jpg" alt="Card image cap"></a>
                             <div class="card-body">
                                 <h6 class="date"><span>
                                      By: DYY</span> Sep 30.2018</h6>
                                 <h5 class="card-title"><a class="b-post text-dark" href="https://blog.csdn.net/qq_40907977/article/details/103001833">Ubuntu系统上为用户授予和删除sudo权限</a></h5>
-                                <p class="card-text">使用adduser命令创建新用户：$ sudo adduser ywnz将用户添加到sudo组：$ sudo adduser ywnz sudo</p>
-                                <p class="card-text">了解更多请点击用户sudo权限</p>
+                                
+                                <p><strong>一、授予sudo权限给Linux系统上的普通用户</strong></p> 
+                                <p>通常&#xff0c;我们使用adduser命令创建新用户&#xff0c;如下所示&#xff1a;</p> 
+                                <p>$ sudo adduser ywnz</p> 
+                                <p>如果你希望新创建的用户使用sudo执行任何管理任务&#xff0c;只需使用以下命令将他添加到sudo组&#xff1a;</p> 
+                                <p>$ sudo usermod -a -G sudo ywnz</p> 
+                                <p>上面的命令将使名为ywnz的用户成为sudo组的成员。</p> 
+                                <p>你也可以使用此命令将用户添加到sudo组&#xff1a;</p> 
+                                <p>$ sudo adduser ywnz sudo</p> 
+                                <p>现在&#xff0c;注销并以新用户身份登录&#xff0c;以使此更改生效&#xff0c;用户现在已成为管理用户。</p> 
+                                <p>要验证它&#xff0c;只需在任何命令中使用sudo作为前缀&#xff1a;</p> 
+                                <p>ywnz$ sudo mkdir /test</p> 
+                                <p>[sudo] password for ywnz:<br /> 
+                                    <a href=""> <img class="card-img" src="https://img-blog.csdnimg.cn/2019111020381358.png?x-oss-process&#61;image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTA3OTc3,size_16,color_FFFFFF,t_70" alt="Card image cap"></a><br>
+                                    <a href=""> <img class="card-img" src="https://img-blog.csdnimg.cn/20191110203403609.png?x-oss-process&#61;image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTA3OTc3,size_16,color_FFFFFF,t_70" alt="Card image cap"></a><br>
+                                    <a href=""> <img class="card-img" src="https://img-blog.csdnimg.cn/201911102034425.png" alt="Card image cap"></a><br> <strong>二、删除用户的sudo权限</strong></p> 
+                                <p>删除特定用户的sudo权限&#xff0c;而不从Linux框中删除它&#xff0c;要将任何用户设为普通用户&#xff0c;只需将其从sudo组中删除即可。<br /> 想从sudo组中删除一个名为ywnz的用户&#xff0c;只需运行&#xff1a;</p> 
+                                <pre><code>$ sudo deluser ywnz sudo
+                                </code></pre> 
+                                <p>输出信息如下&#xff1a;</p> 
+                                <pre><code>Removing user &#96;ywnz&#39; from group &#96;sudo&#39; ...
+
+                                Done.
+                                </code></pre> 
+                                <p>此命令仅从sudo组中删除用户ywnz&#xff0c;但不会永久地从系统中删除用户&#xff0c;现在&#xff0c;他成为普通用户&#xff0c;无法像sudo用户那样执行任何管理任务。</p> 
+                                <p>此外&#xff0c;你可以使用以下命令撤消用户的sudo访问权限&#xff1a;</p> 
+                                <pre><code>$ sudo gpasswd -d ywnz sudo
+                                </code></pre> 
+                                <p>从sudo组中删除用户时请小心&#xff0c;不要从sudo组中删除真正的管理员。</p> 
+                                <p>使用命令验证用户“ywnz”是否已从sudo组中删除&#xff0c;请运行&#xff1a;</p> 
+                                <pre><code>$ sudo -l -U ywnz
+
+                                User ywnz is not allowed to run sudo on ubuntuserver.
+                                </code></pre> 
+                                <p>是的&#xff0c;用户“ywnz”已从sudo组中删除&#xff0c;他无法执行任何管理任务。</p> 
+                                <p>从sudo组中删除用户时请小心&#xff0c;如果你的系统上只有一个sudo用户&#xff0c;并且你将他从sudo组中删除&#xff0c;则无法执行任何管理操作&#xff0c;例如在系统上安装&#xff0c;删除和更新程序&#xff0c;所以请小心操作。</p> 
+                                <p>删除用户<br /> root&#64;ubuntu:~# userdel ywnz<br /> root&#64;ubuntu:~# su - ywnz<br /> No passwd entry for user ‘ywnz’<br /> <img src="https://img-blog.csdnimg.cn/20191110204319812.png" alt="在这里插入图片描述" /><br /> 查看ywnz的密码是否被删除<br /> root&#64;ubuntu:~# cat /etc/passwd</p>
+                                <p class="card-text" ><a class="b-post text-dark" >转载：https://blog.csdn.net/qq_40907977/article/details/103001833</a></p>
+                                
                                 <a class="btn btn-banner text-capitalize my-3" href="https://blog.csdn.net/qq_40907977/article/details/103001833">用户sudo权限</a>
                             </div>
                             <div class="card-footer">
@@ -130,11 +167,11 @@
                         </div>
 
                         <div class="card">
-                            <a href="single.html"> <img class="card-img-top" src="images/banner4.jpg" alt="Card image cap"></a>
+                            <a href="https://z3.ax1x.com/2021/07/20/WY4zs1.jpg"> <img class="card-img-top" src="https://z3.ax1x.com/2021/07/20/WY4zs1.jpg" alt="Card image cap"></a>
                             <div class="card-body">
                                 <h6 class="date"><span>
                                      By: DYY</span> Oct 11.2018</h6>
-                                <h5 class="card-title"><a class="b-post text-dark" href="https://cs231n.github.io/">CS231n学习</a></h5>
+                                <h5 class="card-title"><a class="b-post text-dark" href="">CS231n学习</a></h5>
                                 <p class="card-text" ><a class="b-post text-dark" href="https://cs231n.github.io/">1.cs231n官网</a></p>
                                 <p class="card-text" ><a class="b-post text-dark" href="https://github.com/WittyOrator/JupyterNotebook/tree/master/CS231n">2.cs231n_github</a></p>
                                 <p class="card-text" ><a class="b-post text-dark" href="http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture1.pdf">3.cs231n学习笔记</a></p>
@@ -148,19 +185,60 @@
                         </div>
 
                         <div class="card my-lg-5">
-                            <a href="single.html">  <img class="card-img-top" src="images/banner3.jpg" alt="Card image cap"></a>
+                            <a href="https://z3.ax1x.com/2021/07/20/WY5Kdf.jpg">  <img class="card-img-top" src="https://z3.ax1x.com/2021/07/20/WY5Kdf.jpg" alt="Card image cap"></a>
                             <div class="card-body">
                                 <h6 class="date"><span>
                                      By: DYY</span> Sep 30.2018</h6>
-                                <h5 class="card-title"><a class="b-post text-dark" href="https://www.cnblogs.com/bestzj/p/10476178.html">快速安装第三方库python</a></h5>
-                                <p class="card-text">使用国内镜像，指定源:以opencv为例</p>
-                                <p class="card-text">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple opencv-python</p>
+                                <h5 class="card-title"><a class="b-post text-dark" href="">快速安装第三方库python</a></h5>
+                                
+
+                                <p>安装时替换不同国内镜像链接（鼠标悬停显示链接）</p>
+                                <p>阿里云&nbsp;<a class="card-text " href="http://link.zhihu.com/?target=http%3A//mirrors.aliyun.com/pypi/simple/" rel="nofollow noreferrer" target="_blank" data-za-detail-view-id="1043"><span class="card-text">http://<span class="card-text">mirrors.aliyun.com/pypi<span class="card-text">/simple/</span></span></span></a></p>
+                                <p>中国科技大学&nbsp;<a class="card-text  " href="http://link.zhihu.com/?target=https%3A//pypi.mirrors.ustc.edu.cn/simple/%2520" rel="nofollow noreferrer" target="_blank" data-za-detail-view-id="1043">https://pypi.mirrors.ustc.edu.cn/simple/</a></p>
+                                <p>豆瓣(douban)&nbsp;<a class=" card-text" href="http://link.zhihu.com/?target=http%3A//pypi.douban.com/simple/" rel="nofollow noreferrer" target="_blank" data-za-detail-view-id="1043"><span class="card-text">http://<span class="card-text">pypi.douban.com/simple/</span></span></a></p>
+                                <p>清华大学&nbsp;<a class=" card-text" href="http://link.zhihu.com/?target=https%3A//pypi.tuna.tsinghua.edu.cn/simple/" rel="nofollow noreferrer" target="_blank" data-za-detail-view-id="1043"><span class="card-text">https://<span class="card-text">pypi.tuna.tsinghua.edu.cn<span class="card-text">/simple/</span></span></span></a></p>
+                                <p>中国科学技术大学&nbsp;<a class=" card-text" href="http://link.zhihu.com/?target=http%3A//pypi.mirrors.ustc.edu.cn/simple/" rel="nofollow noreferrer" target="_blank" data-za-detail-view-id="1043"><span class="card-text">http://<span class="card-text">pypi.mirrors.ustc.edu.cn<span class="card-text">/simple/</span></span></span></a></p>
+                                <p><span class="card-text">使用指令指定源:</span></p>
+                                <p><span class="card-text">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple opencv-python</span></p>
+                                <p><span class="card-text">秒秒种成功安装</span></p>
+                                <p>&nbsp;</p>
+                                <p><span class="card-text">还有scarpy安装很烦 所以使用conda install scrapy也很快（必须安装anaconda）</span></p>
+
                                 <a class="btn btn-banner text-capitalize my-3" href="https://www.cnblogs.com/bestzj/p/10476178.html">第三方库</a>
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">Last updated 3 mins ago</small>
                             </div>
                         </div>
+
+                        <div class="card my-lg-5">
+                            <a href="https://z3.ax1x.com/2021/07/20/WYhT4e.jpg">  <img class="card-img-top" src="https://z3.ax1x.com/2021/07/20/WYhT4e.jpg" alt="Card image cap"></a>
+                            <div class="card-body">
+                                <h6 class="date"><span>
+                                     By: DYY</span> Sep 30.2018</h6>
+                                <h5 class="card-title"><a class="b-post text-dark" href="">Linux重定向输出</a></h5>
+                                <p class="card-text">linux下把 python 程序运行的输出结果记录到 log 文件中</p>
+                                <p class="card-text">简单操作如下图：</p>
+                                    <a href="https://z3.ax1x.com/2021/07/20/WYfEzn.jpg"> <img class="card-img" src="https://z3.ax1x.com/2021/07/20/WYfEzn.jpg" alt="Card image cap"></a>
+                                    <p>&nbsp;</p>
+                                    <p><strong>1重定向</strong></p>
+                                    <p><br><strong>1.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 重定向符号</strong><br><br>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 输出重定向到一个文件或设备 覆盖原来的文件<br>&gt;!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 输出重定向到一个文件或设备 强制覆盖原来的文件<br>&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 输出重定向到一个文件或设备 追加原来的文件<br>&lt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 输入重定向到一个程序&nbsp;<br><br><strong>1.2标准错误重定向符号</strong><br><br>2&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 将一个标准错误输出重定向到一个文件或设备 覆盖原来的文件&nbsp; b-shell<br>2&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 将一个标准错误输出重定向到一个文件或设备 追加到原来的文件<br>2&gt;&amp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 将一个标准错误输出重定向到标准输出 注释:1 可能就是代表 标准输出<br>&gt;&amp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 将一个标准错误输出重定向到一个文件或设备 覆盖原来的文件&nbsp; c-shell<br>|&amp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 将一个标准错误 管道 输送 到另一个命令作为输入<br><br><strong>1.3命令重导向示例</strong><br><br>在 bash 命令执行的过程中，主要有三种输出入的状况，分别是：<br>1. 标准输入；代码为 0 ；或称为 stdin ；使用的方式为 &lt;<br>2. 标准输出：代码为 1 ；或称为 stdout；使用的方式为 1&gt;<br>3. 错误输出：代码为 2 ；或称为 stderr；使用的方式为 2&gt;</p>
+                                    <p><br>[test @test test]# ls -al&nbsp;&gt; list.txt<br>将显示的结果输出到 list.txt 文件中，若该文件以存在则予以取代！</p>
+                                    <p><br>[test @test test]# ls -al&nbsp;&gt;&gt; list.txt<br>将显示的结果累加到 list.txt 文件中，该文件为累加的，旧数据保留！</p>
+                                    <p><br>[test @test test]# ls -al&nbsp;&nbsp;1&gt; list.txt&nbsp;&nbsp;&nbsp;2&gt; list.err<br>将显示的数据，正确的输出到 list.txt&nbsp;错误的数据输出到 list.err</p>
+                                    <p><br>[test @test test]# ls -al 1&gt; list.txt 2&gt;&nbsp;&amp;1<br>将显示的数据，不论正确或错误均输出到 list.txt 当中！错误与正确文件输出到同一个文件中，则必须以上面的方法来写！不能写成其它格式！</p>
+                                    <p>[test @test test]# ls -al 1&gt; list.txt 2&gt; /dev/null<br>将显示的数据，正确的输出到 list.txt 错误的数据则予以丢弃！&nbsp;/dev/null ，可以说成是黑洞装置。为空，即不保存。<br><br><strong>1.4为何要使用命令输出重导向<br></strong><br>• 当屏幕输出的信息很重要，而且我们需要将他存下来的时候；<br>• 背景执行中的程序，不希望他干扰屏幕正常的输出结果时；<br>• 一些系统的例行命令（例如写在 /etc/crontab 中的文件）的执行结果，希望他可以存下来时；<br>• 一些执行命令，我们已经知道他可能的错误讯息，所以想以『 2&gt; /dev/null 』将他丢掉时；<br>• 错误讯息与正确讯息需要分别输出时。</p>
+                                    
+                                
+                                    
+                                <a class="btn btn-banner text-capitalize my-3" href="https://www.cnblogs.com/Gelthin2017/p/13253291.html">Linux重定向输出</a>
+
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+
 
                         <nav aria-label="Page navigation example mt-5 text-left">
                             <ul class="pagination">
