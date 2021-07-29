@@ -107,6 +107,8 @@
                                      By: DYY</span> 2021.7.21</h6>
                                 <h5 class="card-title"><a class="b-post text-dark" href="">docker基本指令以及run</a></h5>
                                 <p class="card-text">run指令示例：docker run --gpus all -v /home/dyy/:/home/dyy/ -v /home/datasets/Market-1501-v15.09.15/:/home/datasets/Market-1501-v15.09.15/ -v /home/datasets/Market-1501-v15.09.15/train/:/home/datasets/Market-1501-v15.09.15/train/ -v /home/datasets/Market-1501-v15.09.15/test/:/home/datasets/Market-1501-v15.09.15/test/ --shm-size=10g -it modify /bin/bash</p>
+                                <p class="card-text">加入docker用户组：dyy@jyzbyj-SYS-4028GR-TR:~/fast-reid$ sudo usermod -aG docker dyy1</p>
+                                <p class="card-text">查看docker用户组：dyy@jyzbyj-SYS-4028GR-TR:~/fast-reid$ cat /etc/group</p>
                                 <a class="btn btn-banner text-capitalize my-3" href="Linux_Docker.pdf">Docker使用手册</a>
                             </div>
                             <div class="card-footer">
