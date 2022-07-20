@@ -3,6 +3,166 @@
 <html lang="zxx">
 
 <head>
+    <style>
+        #cnblogs_post_body .cnblogs_code {
+      /* background-color: rgba(152, 147, 147, 0.28); */
+      /* border: 1px solid rgba(255, 251, 251, 0); */
+      border-radius: 4px;
+      color: #000;
+      font-family: Courier New !important;
+      font-size: 13px !important;
+      margin: 5px 0;
+      overflow: auto;
+      padding: 5px;
+    }
+    .hljs-built_in,
+    .hljs-keyword,
+    .hljs-name,
+    .hljs-selector-tag,
+    .hljs-tag {
+      color: #332870 !important;
+    }
+
+    .hljs-emphasis,
+    .hljs-strong {
+      color: #a8a8a2 !important;
+    }
+    .hljs-built_in,
+    .hljs-keyword,
+    .hljs-name,
+    .hljs-selector-tag,
+    .hljs-tag {
+      color: #bababa !important;
+    }
+
+    .hljs-bullet,
+    .hljs-link,
+    .hljs-literal,
+    .hljs-number,
+    .hljs-quote,
+    .hljs-regexp {
+      color: #27c94a !important;
+    }
+
+    .hljs-code,
+    .hljs-selector-class {
+      color: #eeff00 !important;
+    }
+
+    .hljs-emphasis {
+      font-style: italic !important;
+    }
+
+    .hljs-attribute,
+    .hljs-keyword,
+    .hljs-name,
+    .hljs-section,
+    .hljs-selector-tag,
+    .hljs-variable {
+      color: #00c3ff !important;
+    }
+
+    .hljs-attr,
+    .hljs-params {
+      color: #b9b9b9 !important;
+    }
+
+    .hljs-string {
+      color: #ffbb00 !important;
+    }
+
+    .hljs-addition,
+    .hljs-built_in,
+    .hljs-builtin-name,
+    .hljs-selector-attr,
+    .hljs-selector-id,
+    .hljs-selector-pseudo,
+    .hljs-subst,
+    .hljs-symbol,
+    .hljs-template-tag,
+    .hljs-template-variable,
+    .hljs-title,
+    .hljs-type {
+      color: #dfe231 !important;
+    }
+
+    .hljs-comment,
+    .hljs-deletion {
+      color: #008839 !important;
+    }
+
+    .hljs-meta {
+      color: #00ff0d !important;
+    }
+    #cnblogs_post_body .toc ul {
+      max-height: 550px;
+      overflow-y: auto;
+    }
+
+    .cnblogs-markdown .hljs {
+      display: block;
+      overflow-x: auto;
+      padding: 0.5em !important;
+      background: #2b2b2b !important;
+      font-size: 14px !important;
+      color: #bababa !important;
+      font-family: Source Code Pro, Consolas, Menlo, Monaco, Courier New,
+        monospace !important;
+    }
+    #cnblogs_post_body h1::before {
+      content: "H1";
+      margin-right: 10px;
+      color: gainsboro;
+    }
+    #cnblogs_post_body h2::before {
+      content: "H2";
+      margin-right: 10px;
+      color: gainsboro;
+    }
+    #cnblogs_post_body h3::before {
+      content: "H3";
+      margin-right: 10px;
+      color: gainsboro;
+    }
+    #mainContent #post_detail #cnblogs_post_body h4::before {
+      content: "h4";
+      margin-right: 10px;
+      color: gainsboro;
+    }
+    #cnblogs_post_body h5::before {
+      content: "h5";
+      margin-right: 10px;
+      color: gainsboro;
+    }
+    #cnblogs_post_body h6::before {
+      content: "h6";
+      margin-right: 10px;
+      color: gainsboro;
+    }
+    #cnblogs_post_body td.hljs-ln-numbers {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      text-align: center;
+      color: #ccc;
+      border-right: 1px solid #ccc;
+      vertical-align: top;
+      padding-right: 5px;
+
+      /* your custom style here */
+    }
+
+    #cnblogs_post_body .hljs td {
+      border-collapse: inherit;
+      min-width: unset;
+      padding-left: 20px;
+      padding-right: 10px;
+    }
+    </style>
     <title>Blog of dyy</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="Bookmark" href="favicon.ico">
@@ -100,21 +260,99 @@
                 <h3 class="tittle text-center"><span class="sub-tittle"> </span>我的博客</h3>
                 <div class="row mt-lg-5 mt-3">
                     <div class="col-lg-8 blog-left-content">
-                        <!--分界线这是一篇博客_上界
+                    
                         <div class="card">
-                            <a href="https://blog.csdn.net/lizhiqiang1217/article/details/89070075"> <img class="card-img-top" src="images/banner2.jpg" alt="Card image cap"></a>
+                            <a href=""> <img class="card-img-top" src="https://s1.ax1x.com/2022/07/20/jbPlXq.jpg" alt="Card image cap"></a>
                             <div class="card-body">
                                 <h6 class="date"><span>
                                      By: DYY</span> 2021.7.21</h6>
-                                <h5 class="card-title"><a class="b-post text-dark" href="https://blog.csdn.net/u013378306/article/details/86668313">第三页博客测试</a></h5>
-                                <p class="card-text">run指令示例：docker run --gpus all -v /home/dyy/:/home/dyy/ -v /home/datasets/Market-1501-v15.09.15/:/home/datasets/Market-1501-v15.09.15/ -v /home/datasets/Market-1501-v15.09.15/train/:/home/datasets/Market-1501-v15.09.15/train/ -v /home/datasets/Market-1501-v15.09.15/test/:/home/datasets/Market-1501-v15.09.15/test/ --shm-size=10g -it modify /bin/bash</p>
-                                <a class="btn btn-banner text-capitalize my-3" href="Linux_Docker.pdf">Docker使用手册</a>
+                                <h5 class="card-title"><a class="b-post text-dark" href="">基于跳表的轻量级KV存储引擎</a></h5>
+                                <p class="card-text">跳表使用的是空间换时间的思想，通过构建多级索引来提高查询效率，本项目包括跳表的核心实现、makefile文件编写与压力测试三个部分。项目使用C++实现，包含了数据插入、删除、查询、展示、数据落盘、加载数据以及数据规模显示等功能；编写makefile方便编译生成以及清除；利用C++11的chrono 库计算耗时，进而使用多线程进行压力测试，同时熟悉了makefile文件以及shell脚本的编写。</p>
+                                    <p class="card-text"><strong><font size="3">1.跳表实现</font></strong></p>
+                                    <p class="card-text" ><a class="b-post text-dark" href="">跳表是基于有序链表，添加多级索引构建而成，支持快速的查找，插入，删除数据操作。除此之外，跳表还支持快速的查找某个区间的数据。在实际的项目开发中，Redis中的有序集合(sorted set)就是用跳表实现的。本项目主要包含了数据插入、删除、查询、展示、数据落盘、加载数据以及数据规模显示等功能，各个模块代码不再展示。</a></p>
+                                    <p class="card-text" ><a class="b-post text-dark" ></a></p>
+                                    <p class="card-text"><strong><font size="3">2.makefile文件编写</font></strong></p>
+                                    <body>
+                                        <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+                                          <pre>
+                                                <code class="language-python">CC=g++  
+CXXFLAGS = -std=c++0x
+CFLAGS=-I
+skiplist: main.o 
+$(CC) -o ./bin/main main.o --std=c++11 -pthread 
+rm -f ./*.o
+                                                    
+clean: 
+rm -f ./*.o
+                                                </code>
+                                              </pre>
+                                        </div>
+                                        <div>
+                                          <script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js"></script>
+                                          <script src="https://cdn.bootcdn.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+                                          <script type="text/javascript">
+                                            hljs.initHighlightingOnLoad();
+                                      
+                                            hljs.initLineNumbersOnLoad();
+                                      
+                                            $(document).ready(function () {
+                                              $("code.hljs").each(function (i, block) {
+                                                hljs.lineNumbersBlock(block);
+                                              });
+                                            });
+                                          </script>
+                                        </div>
+                                      </body>
+                                      
+                                    <p class="card-text" ><a class="b-post text-dark" href=""></a></p>
+                                    <p class="card-text" ><a class="b-post text-dark" ></a></p>
+                                    <p class="card-text" ><a class="b-post text-dark" ></a></p>
+    
+                                    <p class="card-text"><strong><font size="3">3.压力测试</font></strong></p>
+                                    <p class="card-text" ><a class="b-post text-dark" href="">3.1 C++11计时器chrono</a></p>
+                                    <p class="card-text" ><a class="b-post text-dark" href="">chrono 是一个与时间和日期相关的库，通过chrono库可以很方便对日期和时间进行一系列的处理。chrono中有三种不同的时钟，分别是system_clock(系统时钟)，steady_clock(稳定时钟)，high_resolution_clock（高精度时钟）    </a></p>
+                                    
+                                    <body>
+                                        <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+                                          <pre>
+                                                <code class="language-python">std::chrono::system_clock: 依据系统当前时间
+std::chrono::steady_clock: 不能设置的时钟，以统一速率运行
+std::chrono::high_resolution_clock: 高分辨率时钟
+使用高分辨率时钟进行计时，eg.auto finish = std::chrono::high_resolution_clock::now();
+duration_cast类型转换函数：将duration转换成另一个类型的duration，std::chrono::duration<double> elapsed = finish - start;
+                                                </code>
+                                              </pre>
+                                        </div>
+                                        <div>
+                                          <script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js"></script>
+                                          <script src="https://cdn.bootcdn.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+                                          <script type="text/javascript">
+                                            hljs.initHighlightingOnLoad();
+                                      
+                                            hljs.initLineNumbersOnLoad();
+                                      
+                                            $(document).ready(function () {
+                                              $("code.hljs").each(function (i, block) {
+                                                hljs.lineNumbersBlock(block);
+                                              });
+                                            });
+                                          </script>
+                                        </div>
+                                      </body>
+
+
+
+                                    
+                                    <p class="card-text" ><a class="b-post text-dark" >3.2 多线程压力测试</a></p>
+                                    <p class="card-text" ><a class="b-post text-dark" href="">设置线程数量与测试计数的宏，#define NUM_THREADS 1，#define TEST_COUNT 100000，每个线程处理同样数量的插入与查询请求。</a></p>
+                                
+                                    <a class="btn btn-banner text-capitalize my-3" href="">基于跳表的轻量级KV存储引擎</a>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted">Last updated 3 mins ago</small>
+                                <small class="text-muted">Last updated 3 months ago</small>
                             </div>
                         </div>
-                        分界线这是一篇博客_下界-->
+            
 
                         
 
